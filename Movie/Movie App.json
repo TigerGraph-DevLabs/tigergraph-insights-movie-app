@@ -1,0 +1,1896 @@
+{
+    "id": "xesfUUjLw783r6GS68JgYp",
+    "title": "Movie App",
+    "pages": [
+        {
+            "id": "bokMKUfH5o2t2FF85cYcNR",
+            "title": "Overview",
+            "chartMap": {
+                "kBp6w7jq32Dbajyz6f4SGv": {
+                    "id": "kBp6w7jq32Dbajyz6f4SGv",
+                    "graphName": "Movies",
+                    "title": "Movie Graph",
+                    "type": "internal-graph",
+                    "refreshRate": 0,
+                    "queryType": "pattern",
+                    "searchPattern": [
+                        {
+                            "id": "d69a265f-1b75-4e49-8308-bc641f8ae257",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person",
+                            "orderBy": []
+                        },
+                        {
+                            "id": "c69ae06d-d285-47ba-8967-f0e84e0c3a16",
+                            "data": "ACTED_IN",
+                            "type": "edge",
+                            "from": "Person",
+                            "to": "Movie",
+                            "edgePairs": [],
+                            "direction": 1,
+                            "alias": "ACTED_IN",
+                            "orderBy": []
+                        },
+                        {
+                            "id": "5c6c4960-ebc9-4e05-b3a8-7b57f45edfc2",
+                            "data": "Movie",
+                            "type": "vertex",
+                            "alias": "Movie",
+                            "orderBy": [
+                                {
+                                    "asc": false,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Movie_2.released"
+                                    },
+                                    "label": "Movie.released"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "dcc0f097-3205-4f19-a8fb-6674be09e732",
+                            "data": "toYear",
+                            "type": "PARAM",
+                            "paramName": "released",
+                            "paramType": "UINT",
+                            "paramOperator": "le",
+                            "paramGlobalInput": "toYear",
+                            "orderBy": []
+                        },
+                        {
+                            "id": "2d030a85-034c-481f-b82b-7a91119b01bb",
+                            "data": "fromYear",
+                            "type": "PARAM",
+                            "paramName": "released",
+                            "paramType": "UINT",
+                            "paramOperator": "ge",
+                            "paramGlobalInput": "fromYear",
+                            "orderBy": []
+                        },
+                        {
+                            "id": "d3ce3bdc-096c-48a9-bf4f-cf2328aee86c",
+                            "data": "DIRECTED",
+                            "type": "edge",
+                            "from": "Person",
+                            "to": "Movie",
+                            "edgePairs": [],
+                            "direction": -1,
+                            "alias": "DIRECTED",
+                            "orderBy": []
+                        },
+                        {
+                            "id": "d69a265f-1b75-4e49-8308-bc641f8ae257",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person_2",
+                            "orderBy": []
+                        }
+                    ],
+                    "query": "",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {}
+                },
+                "6VWz9pL8vZ9Xg4TdEQRfmZ": {
+                    "id": "6VWz9pL8vZ9Xg4TdEQRfmZ",
+                    "graphName": "Movies",
+                    "title": "Release Year",
+                    "type": "Inputs",
+                    "refreshRate": 0,
+                    "queryType": "pattern",
+                    "searchPattern": [],
+                    "query": "",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "inputStates": [
+                            {
+                                "id": "input_iNNnYYkD8qXvRJkZMbWWYS",
+                                "name": "fromYear",
+                                "dataType": "Number",
+                                "widgetType": "Input",
+                                "settings": {
+                                    "min": 1960,
+                                    "max": 2022,
+                                    "step": 1
+                                },
+                                "label": "From",
+                                "value": ""
+                            },
+                            {
+                                "id": "input_rgPeq3iEdEhNjMwzU1vtJr",
+                                "name": "toYear",
+                                "dataType": "Number",
+                                "widgetType": "Input",
+                                "settings": {
+                                    "min": 1963,
+                                    "max": 2022,
+                                    "step": 1
+                                },
+                                "label": "To",
+                                "value": ""
+                            }
+                        ]
+                    }
+                },
+                "wLGqFuMEnKhqcwjaLGkskG": {
+                    "id": "wLGqFuMEnKhqcwjaLGkskG",
+                    "graphName": "Movies",
+                    "title": "# of Movies",
+                    "type": "value",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [],
+                    "query": "INTERPRET QUERY(INT fromYear, INT toYear) FOR GRAPH Movies {  \n  SELECT COUNT(p) AS totalNumber INTO T  \n  FROM Movie:p\n  WHERE p.released >= fromYear and p.released <= toYear;  \n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "iconURL": "/studio/assets/gvis/icons/builtin/64/121-battery.png",
+                        "iconColor": "#282828"
+                    }
+                },
+                "dxSEi5ZUWQJjDeK7PShPsF": {
+                    "id": "dxSEi5ZUWQJjDeK7PShPsF",
+                    "graphName": "Movies",
+                    "title": "Release Trend",
+                    "type": "line",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [
+                        {
+                            "id": "c6ad47df-fbd1-4a8b-9652-2ab1b3a87648",
+                            "data": "Movie",
+                            "type": "vertex",
+                            "alias": "Movie",
+                            "orderBy": [
+                                {
+                                    "asc": true,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Movie_0.title"
+                                    },
+                                    "label": "Movie.title"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9c51fe34-c132-46d8-94b5-908a692a4dff",
+                            "data": "",
+                            "type": "PARAM",
+                            "paramName": "id",
+                            "paramType": "STRING"
+                        }
+                    ],
+                    "query": "INTERPRET QUERY(INT fromYear, INT toYear) FOR GRAPH Movies SYNTAX v2 {\n  SELECT    m.released, count(DISTINCT m) as totalCount INTO T\n  FROM      Movie:m\n  WHERE m.released >= fromYear and m.released <= toYear\n  GROUP BY m.released;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "tableIndex": 0,
+                        "tableHeaders": [
+                            "released",
+                            "totalCount"
+                        ],
+                        "category": [
+                            {
+                                "id": "released",
+                                "type": "number"
+                            }
+                        ],
+                        "value": [
+                            {
+                                "id": "totalCount",
+                                "type": "number"
+                            }
+                        ]
+                    }
+                },
+                "tyNF3fJu6Zj7g8yFpmtJfV": {
+                    "id": "tyNF3fJu6Zj7g8yFpmtJfV",
+                    "graphName": "Movies",
+                    "title": "Movies",
+                    "type": "table",
+                    "refreshRate": 0,
+                    "queryType": "pattern",
+                    "searchPattern": [
+                        {
+                            "id": "bd6a9130-f7cc-4a2b-b954-9c6de1883f64",
+                            "data": "Movie",
+                            "type": "vertex",
+                            "alias": "Movie",
+                            "orderBy": [
+                                {
+                                    "asc": false,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Movie_0.released"
+                                    },
+                                    "label": "Movie.released"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ceaa4274-4849-41f7-a45c-4e7003c8be18",
+                            "data": "toYear",
+                            "type": "PARAM",
+                            "paramName": "released",
+                            "paramType": "UINT",
+                            "paramOperator": "le",
+                            "paramGlobalInput": "toYear",
+                            "orderBy": []
+                        },
+                        {
+                            "id": "8d42d972-82c1-4a2b-8c02-df42699d86e5",
+                            "data": "fromYear",
+                            "type": "PARAM",
+                            "paramName": "released",
+                            "paramType": "UINT",
+                            "paramOperator": "ge",
+                            "paramGlobalInput": "fromYear",
+                            "orderBy": []
+                        }
+                    ],
+                    "query": "",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "tableColumns": [
+                            {
+                                "id": "Matched pattern",
+                                "isChecked": "false",
+                                "label": ""
+                            },
+                            {
+                                "id": "Vertices",
+                                "isChecked": "indeterminate",
+                                "isExpanded": true,
+                                "children": [
+                                    {
+                                        "id": "Movie",
+                                        "isChecked": "indeterminate",
+                                        "type": "vertex",
+                                        "children": [
+                                            {
+                                                "id": "id",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "title",
+                                                "isChecked": "true",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "released",
+                                                "isChecked": "true",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "tagline",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "label": "Vertices"
+                            },
+                            {
+                                "id": "Edges",
+                                "isChecked": "true",
+                                "isExpanded": false,
+                                "children": [],
+                                "label": "Edges"
+                            }
+                        ],
+                        "showColumns": [
+                            {
+                                "name": "Matched pattern",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.released",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.tagline",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.title",
+                                "isChecked": true
+                            }
+                        ],
+                        "tableHeaders": [
+                            "Matched pattern",
+                            "Movie"
+                        ],
+                        "sortedColumns": [
+                            "Movie.title",
+                            "Movie.released"
+                        ],
+                        "tableActions": [
+                            {
+                                "text": "Details",
+                                "url": "",
+                                "params": [
+                                    {
+                                        "name": "movieName",
+                                        "value": "Movie.title",
+                                        "paramGlobalInput": "",
+                                        "isCreatable": false
+                                    }
+                                ],
+                                "urlName": "Movie Details",
+                                "pageID": "3EjCGCrw1SvzTkHsBN7Zm3"
+                            }
+                        ]
+                    }
+                },
+                "qtZbkYip6SF9QdZmvQSgZF": {
+                    "id": "qtZbkYip6SF9QdZmvQSgZF",
+                    "graphName": "Movies",
+                    "title": "Top 10 Directors",
+                    "type": "pie",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [],
+                    "query": "INTERPRET QUERY(INT fromYear, INT toYear) FOR GRAPH Movies{\n  SELECT    p.name AS Director, count(m) AS MovieCount INTO T\n  FROM      Person:p -(DIRECTED>:e)- Movie:m\n  WHERE m.released >= fromYear AND m.released <= toYear\n  GROUP BY p\n  ORDER BY count(m) desc\n  LIMIT 10;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "tableIndex": 0,
+                        "tableHeaders": [
+                            "Director",
+                            "MovieCount"
+                        ],
+                        "category": [
+                            {
+                                "id": "Director",
+                                "type": "string"
+                            }
+                        ],
+                        "value": [
+                            {
+                                "id": "MovieCount",
+                                "type": "number"
+                            }
+                        ]
+                    }
+                },
+                "4w7sHiDDQQ6ZUPdESG6TA7": {
+                    "id": "4w7sHiDDQQ6ZUPdESG6TA7",
+                    "graphName": "Movies",
+                    "title": "Top 10 Actors / Actresses",
+                    "type": "pie",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [],
+                    "query": "INTERPRET QUERY(INT fromYear, INT toYear) FOR GRAPH Movies{\n  SELECT    p.name AS Director, count(m) AS MovieCount INTO T\n  FROM      Person:p -(ACTED_IN>:e)- Movie:m\n  WHERE m.released >= fromYear AND m.released <= toYear\n  GROUP BY p\n  ORDER BY count(m) desc\n  LIMIT 10;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "tableIndex": 0,
+                        "tableHeaders": [
+                            "Director",
+                            "MovieCount"
+                        ],
+                        "category": [
+                            {
+                                "id": "Director",
+                                "type": "string"
+                            }
+                        ],
+                        "value": [
+                            {
+                                "id": "MovieCount",
+                                "type": "number"
+                            }
+                        ]
+                    }
+                }
+            },
+            "layouts": {
+                "md": [
+                    {
+                        "w": 5,
+                        "h": 48,
+                        "x": 0,
+                        "y": 0,
+                        "i": "kBp6w7jq32Dbajyz6f4SGv",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 4,
+                        "h": 8,
+                        "x": 5,
+                        "y": 0,
+                        "i": "6VWz9pL8vZ9Xg4TdEQRfmZ",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 3,
+                        "h": 8,
+                        "x": 9,
+                        "y": 0,
+                        "i": "wLGqFuMEnKhqcwjaLGkskG",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 7,
+                        "h": 14,
+                        "x": 5,
+                        "y": 34,
+                        "i": "dxSEi5ZUWQJjDeK7PShPsF",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 4,
+                        "h": 26,
+                        "x": 5,
+                        "y": 8,
+                        "i": "tyNF3fJu6Zj7g8yFpmtJfV",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 3,
+                        "h": 13,
+                        "x": 9,
+                        "y": 8,
+                        "i": "qtZbkYip6SF9QdZmvQSgZF",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 3,
+                        "h": 13,
+                        "x": 9,
+                        "y": 21,
+                        "i": "4w7sHiDDQQ6ZUPdESG6TA7",
+                        "moved": false,
+                        "static": false
+                    }
+                ]
+            },
+            "globalParameters": {
+                "fromYear": {
+                    "value": 1960,
+                    "type": "NUMBER",
+                    "name": "fromYear",
+                    "id": "input_iNNnYYkD8qXvRJkZMbWWYS"
+                },
+                "toYear": {
+                    "value": 2022,
+                    "type": "NUMBER",
+                    "name": "toYear",
+                    "id": "input_rgPeq3iEdEhNjMwzU1vtJr"
+                }
+            },
+            "isNew": false,
+            "iconURL": "/studio/assets/gvis/icons/builtin/64/116-statistics.png"
+        },
+        {
+            "id": "3EjCGCrw1SvzTkHsBN7Zm3",
+            "title": "Movie Details",
+            "chartMap": {
+                "hPybcPVKmddoKQv3czYs6G": {
+                    "id": "hPybcPVKmddoKQv3czYs6G",
+                    "graphName": "Movies",
+                    "title": "Select a Movie",
+                    "type": "Inputs",
+                    "refreshRate": 0,
+                    "queryType": "pattern",
+                    "searchPattern": [],
+                    "query": "",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "inputStates": [
+                            {
+                                "id": "input_wHGoanvEsmvDdoMLkvP7a4",
+                                "name": "movieName",
+                                "dataType": "String",
+                                "widgetType": "Dropdown",
+                                "settings": {
+                                    "useQuery": true,
+                                    "open": false,
+                                    "searchPattern": [
+                                        {
+                                            "id": "af27fee0-ffaf-4586-a270-0a52fa706817",
+                                            "data": "Movie",
+                                            "type": "vertex",
+                                            "alias": "Movie",
+                                            "orderBy": [
+                                                {
+                                                    "asc": false,
+                                                    "expression": {
+                                                        "type": "AttrVariable",
+                                                        "value": "alias_schema_Movie_0.released"
+                                                    },
+                                                    "label": "Movie.released"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "query": "",
+                                    "graphName": "Movies",
+                                    "staticData": "{}",
+                                    "patternLimit": 300,
+                                    "options": [],
+                                    "tableHeaders": [
+                                        "Matched pattern",
+                                        "Movie"
+                                    ],
+                                    "labelKey": "Movie.title",
+                                    "valueKey": "Movie.title"
+                                },
+                                "label": "Name"
+                            }
+                        ]
+                    }
+                },
+                "75Am8rnGucFwKvAPsvxxiz": {
+                    "id": "75Am8rnGucFwKvAPsvxxiz",
+                    "graphName": "Movies",
+                    "title": "Release Year",
+                    "type": "value",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [],
+                    "query": "INTERPRET QUERY(string movieName) FOR GRAPH Movies{\n  select m.released INTO T\n  FROM Movie:m\n  where m.title == movieName;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {}
+                },
+                "sGgnPfm8oz1MERHT69H831": {
+                    "id": "sGgnPfm8oz1MERHT69H831",
+                    "graphName": "Movies",
+                    "title": "Tagline",
+                    "type": "value",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [],
+                    "query": "INTERPRET QUERY(string movieName) FOR GRAPH Movies{\n  select m.tagline INTO T\n  FROM Movie:m\n  where m.title == movieName;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "fontSize": [
+                            24
+                        ],
+                        "textAlign": "left"
+                    }
+                },
+                "uJzcWyqyPSA2gzeaFFwBCL": {
+                    "id": "uJzcWyqyPSA2gzeaFFwBCL",
+                    "graphName": "Movies",
+                    "title": "Movie Graph",
+                    "type": "internal-graph",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [],
+                    "query": "INTERPRET QUERY(string movieName) FOR GRAPH Movies{\n  select p,m,e INTO T\n  FROM Person: p -(_>:e)- Movie:m\n  where m.title == movieName;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {}
+                },
+                "icBGbpMTBerowJmsZ3fiVT": {
+                    "id": "icBGbpMTBerowJmsZ3fiVT",
+                    "graphName": "Movies",
+                    "title": "Directors",
+                    "type": "table",
+                    "refreshRate": 0,
+                    "queryType": "pattern",
+                    "searchPattern": [
+                        {
+                            "id": "948ab809-4bd8-4435-bfc5-6419180bbac5",
+                            "data": "Movie",
+                            "type": "vertex",
+                            "alias": "Movie",
+                            "orderBy": [
+                                {
+                                    "asc": true,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Movie_0.title"
+                                    },
+                                    "label": "Movie.title"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f4059e8f-de6c-4a30-8f05-973d6e578ef0",
+                            "data": "movieName",
+                            "type": "PARAM",
+                            "paramName": "title",
+                            "paramType": "STRING",
+                            "paramOperator": "eq",
+                            "paramGlobalInput": "movieName"
+                        },
+                        {
+                            "id": "114e3d9a-e4ab-43bb-aea9-a11f251c7a19",
+                            "data": "DIRECTED",
+                            "type": "edge",
+                            "from": "Person",
+                            "to": "Movie",
+                            "edgePairs": [],
+                            "direction": -1,
+                            "alias": "DIRECTED"
+                        },
+                        {
+                            "id": "d5737f66-42cc-4328-b4ff-263a23bf8f37",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person"
+                        }
+                    ],
+                    "query": "INTERPRET QUERY() FOR GRAPH Movies {\n\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "tableColumns": [
+                            {
+                                "id": "Matched pattern",
+                                "isChecked": "false",
+                                "label": ""
+                            },
+                            {
+                                "id": "Vertices",
+                                "isChecked": "indeterminate",
+                                "isExpanded": true,
+                                "children": [
+                                    {
+                                        "id": "Movie",
+                                        "isChecked": "false",
+                                        "type": "vertex",
+                                        "children": [
+                                            {
+                                                "id": "id",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "title",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "released",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "tagline",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "Person",
+                                        "isChecked": "indeterminate",
+                                        "type": "vertex",
+                                        "children": [
+                                            {
+                                                "id": "id",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "name",
+                                                "isChecked": "true",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "born",
+                                                "isChecked": "true",
+                                                "type": "vertex"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "label": "Vertices"
+                            },
+                            {
+                                "id": "Edges",
+                                "isChecked": "true",
+                                "isExpanded": false,
+                                "children": [],
+                                "label": "Edges"
+                            }
+                        ],
+                        "showColumns": [
+                            {
+                                "name": "Matched pattern",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.released",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.tagline",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.title",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.born",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.name",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "DIRECTED.from_type",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "DIRECTED.from_id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "DIRECTED.to_type",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "DIRECTED.to_id",
+                                "isChecked": true
+                            }
+                        ],
+                        "tableHeaders": [
+                            "Matched pattern",
+                            "Movie",
+                            "Person",
+                            "DIRECTED"
+                        ],
+                        "sortedColumns": [
+                            "Person.name",
+                            "Person.born"
+                        ]
+                    }
+                },
+                "kooJ9TFVxgMowiF9n3MGhc": {
+                    "id": "kooJ9TFVxgMowiF9n3MGhc",
+                    "graphName": "Movies",
+                    "title": "Actors/Actresses",
+                    "type": "table",
+                    "refreshRate": 0,
+                    "queryType": "pattern",
+                    "searchPattern": [
+                        {
+                            "id": "948ab809-4bd8-4435-bfc5-6419180bbac5",
+                            "data": "Movie",
+                            "type": "vertex",
+                            "alias": "Movie",
+                            "orderBy": [
+                                {
+                                    "asc": true,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Movie_0.title"
+                                    },
+                                    "label": "Movie.title"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f4059e8f-de6c-4a30-8f05-973d6e578ef0",
+                            "data": "movieName",
+                            "type": "PARAM",
+                            "paramName": "title",
+                            "paramType": "STRING",
+                            "paramOperator": "eq",
+                            "paramGlobalInput": "movieName"
+                        },
+                        {
+                            "id": "3eef64cb-6ff7-4147-9a73-263ce61baa35",
+                            "data": "ACTED_IN",
+                            "type": "edge",
+                            "from": "Person",
+                            "to": "Movie",
+                            "edgePairs": [],
+                            "direction": -1,
+                            "alias": "ACTED_IN"
+                        },
+                        {
+                            "id": "4508bf39-fc04-4736-8fc1-186c6d0e16e2",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person"
+                        }
+                    ],
+                    "query": "INTERPRET QUERY() FOR GRAPH Movies {\n\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "tableColumns": [
+                            {
+                                "id": "Matched pattern",
+                                "isChecked": "false",
+                                "label": ""
+                            },
+                            {
+                                "id": "Vertices",
+                                "isChecked": "indeterminate",
+                                "isExpanded": true,
+                                "children": [
+                                    {
+                                        "id": "Movie",
+                                        "isChecked": "false",
+                                        "type": "vertex",
+                                        "children": [
+                                            {
+                                                "id": "id",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "title",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "released",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "tagline",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "Person",
+                                        "isChecked": "indeterminate",
+                                        "type": "vertex",
+                                        "children": [
+                                            {
+                                                "id": "id",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "name",
+                                                "isChecked": "true",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "born",
+                                                "isChecked": "true",
+                                                "type": "vertex"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "label": "Vertices"
+                            },
+                            {
+                                "id": "Edges",
+                                "isChecked": "false",
+                                "isExpanded": false,
+                                "children": [
+                                    {
+                                        "id": "ACTED_IN",
+                                        "isChecked": "false",
+                                        "type": "edge",
+                                        "children": [
+                                            {
+                                                "id": "roles",
+                                                "isChecked": "false",
+                                                "type": "edge"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "label": "Edges"
+                            }
+                        ],
+                        "showColumns": [
+                            {
+                                "name": "Matched pattern",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.released",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.tagline",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.title",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.born",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.name",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "ACTED_IN.from_type",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "ACTED_IN.from_id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "ACTED_IN.to_type",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "ACTED_IN.to_id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "ACTED_IN.roles",
+                                "isChecked": true
+                            }
+                        ],
+                        "tableHeaders": [
+                            "Matched pattern",
+                            "Movie",
+                            "Person",
+                            "ACTED_IN"
+                        ],
+                        "sortedColumns": [
+                            "Person.name",
+                            "Person.born"
+                        ]
+                    }
+                },
+                "rCpHe2r7edphpiCPgigLSE": {
+                    "id": "rCpHe2r7edphpiCPgigLSE",
+                    "graphName": "Movies",
+                    "title": "Producers",
+                    "type": "table",
+                    "refreshRate": 0,
+                    "queryType": "pattern",
+                    "searchPattern": [
+                        {
+                            "id": "948ab809-4bd8-4435-bfc5-6419180bbac5",
+                            "data": "Movie",
+                            "type": "vertex",
+                            "alias": "Movie",
+                            "orderBy": [
+                                {
+                                    "asc": true,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Movie_0.title"
+                                    },
+                                    "label": "Movie.title"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f4059e8f-de6c-4a30-8f05-973d6e578ef0",
+                            "data": "movieName",
+                            "type": "PARAM",
+                            "paramName": "title",
+                            "paramType": "STRING",
+                            "paramOperator": "eq",
+                            "paramGlobalInput": "movieName"
+                        },
+                        {
+                            "id": "c3231d14-3f74-4fa0-bb18-d1336abd57d5",
+                            "data": "PRODUCED",
+                            "type": "edge",
+                            "from": "Person",
+                            "to": "Movie",
+                            "edgePairs": [],
+                            "direction": -1,
+                            "alias": "PRODUCED"
+                        },
+                        {
+                            "id": "bba77016-f089-4c53-9998-bd9b53bd007d",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person"
+                        }
+                    ],
+                    "query": "INTERPRET QUERY() FOR GRAPH Movies {\n\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "tableColumns": [
+                            {
+                                "id": "Matched pattern",
+                                "isChecked": "false",
+                                "label": ""
+                            },
+                            {
+                                "id": "Vertices",
+                                "isChecked": "indeterminate",
+                                "isExpanded": true,
+                                "children": [
+                                    {
+                                        "id": "Movie",
+                                        "isChecked": "false",
+                                        "type": "vertex",
+                                        "children": [
+                                            {
+                                                "id": "id",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "title",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "released",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "tagline",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "Person",
+                                        "isChecked": "indeterminate",
+                                        "type": "vertex",
+                                        "children": [
+                                            {
+                                                "id": "id",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "name",
+                                                "isChecked": "true",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "born",
+                                                "isChecked": "true",
+                                                "type": "vertex"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "label": "Vertices"
+                            },
+                            {
+                                "id": "Edges",
+                                "isChecked": "true",
+                                "isExpanded": false,
+                                "children": [],
+                                "label": "Edges"
+                            }
+                        ],
+                        "showColumns": [
+                            {
+                                "name": "Matched pattern",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.released",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.tagline",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.title",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.born",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.name",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "PRODUCED.from_type",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "PRODUCED.from_id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "PRODUCED.to_type",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "PRODUCED.to_id",
+                                "isChecked": true
+                            }
+                        ],
+                        "tableHeaders": [
+                            "Matched pattern",
+                            "Movie",
+                            "Person",
+                            "PRODUCED"
+                        ],
+                        "sortedColumns": [
+                            "Person.name",
+                            "Person.born"
+                        ]
+                    }
+                },
+                "dZZ6VRtt54eDfT9ASunpso": {
+                    "id": "dZZ6VRtt54eDfT9ASunpso",
+                    "graphName": "Movies",
+                    "title": "Writers",
+                    "type": "table",
+                    "refreshRate": 0,
+                    "queryType": "pattern",
+                    "searchPattern": [
+                        {
+                            "id": "948ab809-4bd8-4435-bfc5-6419180bbac5",
+                            "data": "Movie",
+                            "type": "vertex",
+                            "alias": "Movie",
+                            "orderBy": [
+                                {
+                                    "asc": true,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Movie_0.title"
+                                    },
+                                    "label": "Movie.title"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f4059e8f-de6c-4a30-8f05-973d6e578ef0",
+                            "data": "movieName",
+                            "type": "PARAM",
+                            "paramName": "title",
+                            "paramType": "STRING",
+                            "paramOperator": "eq",
+                            "paramGlobalInput": "movieName"
+                        },
+                        {
+                            "id": "014805bc-c023-48df-a4fd-072154406a65",
+                            "data": "WROTE",
+                            "type": "edge",
+                            "from": "Person",
+                            "to": "Movie",
+                            "edgePairs": [],
+                            "direction": -1,
+                            "shouldBeBold": "r",
+                            "alias": "WROTE"
+                        },
+                        {
+                            "id": "6766a332-abfa-4186-9fb9-bbb5125e7af3",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person"
+                        }
+                    ],
+                    "query": "INTERPRET QUERY() FOR GRAPH Movies {\n\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "tableColumns": [
+                            {
+                                "id": "Matched pattern",
+                                "isChecked": "false",
+                                "label": ""
+                            },
+                            {
+                                "id": "Vertices",
+                                "isChecked": "indeterminate",
+                                "isExpanded": true,
+                                "children": [
+                                    {
+                                        "id": "Movie",
+                                        "isChecked": "false",
+                                        "type": "vertex",
+                                        "children": [
+                                            {
+                                                "id": "id",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "title",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "released",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "tagline",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "id": "Person",
+                                        "isChecked": "indeterminate",
+                                        "type": "vertex",
+                                        "children": [
+                                            {
+                                                "id": "id",
+                                                "isChecked": "false",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "name",
+                                                "isChecked": "true",
+                                                "type": "vertex"
+                                            },
+                                            {
+                                                "id": "born",
+                                                "isChecked": "true",
+                                                "type": "vertex"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "label": "Vertices"
+                            },
+                            {
+                                "id": "Edges",
+                                "isChecked": "true",
+                                "isExpanded": false,
+                                "children": [],
+                                "label": "Edges"
+                            }
+                        ],
+                        "showColumns": [
+                            {
+                                "name": "Matched pattern",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.released",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.tagline",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Movie.title",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.born",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Person.name",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "PRODUCED.from_type",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "PRODUCED.from_id",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "PRODUCED.to_type",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "PRODUCED.to_id",
+                                "isChecked": true
+                            }
+                        ],
+                        "tableHeaders": [
+                            "Matched pattern",
+                            "Movie",
+                            "Person",
+                            "PRODUCED"
+                        ],
+                        "sortedColumns": [
+                            "Person.name",
+                            "Person.born"
+                        ]
+                    }
+                }
+            },
+            "layouts": {
+                "md": [
+                    {
+                        "w": 3,
+                        "h": 7,
+                        "x": 0,
+                        "y": 0,
+                        "i": "hPybcPVKmddoKQv3czYs6G",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 3,
+                        "h": 7,
+                        "x": 3,
+                        "y": 0,
+                        "i": "75Am8rnGucFwKvAPsvxxiz",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 6,
+                        "h": 7,
+                        "x": 6,
+                        "y": 0,
+                        "i": "sGgnPfm8oz1MERHT69H831",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 6,
+                        "h": 41,
+                        "x": 0,
+                        "y": 7,
+                        "i": "uJzcWyqyPSA2gzeaFFwBCL",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 3,
+                        "h": 20,
+                        "x": 6,
+                        "y": 7,
+                        "i": "icBGbpMTBerowJmsZ3fiVT",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 3,
+                        "h": 21,
+                        "x": 6,
+                        "y": 27,
+                        "i": "kooJ9TFVxgMowiF9n3MGhc",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 3,
+                        "h": 20,
+                        "x": 9,
+                        "y": 7,
+                        "i": "rCpHe2r7edphpiCPgigLSE",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 3,
+                        "h": 21,
+                        "x": 9,
+                        "y": 27,
+                        "i": "dZZ6VRtt54eDfT9ASunpso",
+                        "moved": false,
+                        "static": false
+                    }
+                ]
+            },
+            "globalParameters": {
+                "movieName": {
+                    "value": "Speed Racer",
+                    "type": "STRING",
+                    "name": "movieName",
+                    "id": "input_wHGoanvEsmvDdoMLkvP7a4"
+                }
+            },
+            "isNew": false,
+            "iconURL": "/studio/assets/gvis/icons/builtin/64/121-battery.png"
+        },
+        {
+            "id": "59kcGR4k9qnrgWubTM47c1",
+            "title": "Person Graph",
+            "chartMap": {
+                "fnmAtPKDQ89q8Qjk56TtFZ": {
+                    "id": "fnmAtPKDQ89q8Qjk56TtFZ",
+                    "graphName": "Movies",
+                    "title": "Person Graph",
+                    "type": "internal-graph",
+                    "refreshRate": 0,
+                    "queryType": "pattern",
+                    "searchPattern": [
+                        {
+                            "id": "524d18de-d18c-402a-83e7-20cfcc982ec5",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person",
+                            "orderBy": [
+                                {
+                                    "asc": true,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Person_0.name"
+                                    },
+                                    "label": "Person.name"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "78fcc286-7244-4219-92d4-2f85a0adfba7",
+                            "data": "FOLLOWS",
+                            "type": "edge",
+                            "from": "Person",
+                            "to": "Person",
+                            "edgePairs": [],
+                            "direction": 1,
+                            "alias": "FOLLOWS"
+                        },
+                        {
+                            "id": "524d18de-d18c-402a-83e7-20cfcc982ec5",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person_2"
+                        }
+                    ],
+                    "query": "",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {}
+                }
+            },
+            "layouts": {
+                "md": [
+                    {
+                        "w": 12,
+                        "h": 48,
+                        "x": 0,
+                        "y": 0,
+                        "i": "fnmAtPKDQ89q8Qjk56TtFZ",
+                        "moved": false,
+                        "static": false
+                    }
+                ]
+            },
+            "globalParameters": {},
+            "isNew": false,
+            "iconURL": "/studio/assets/gvis/icons/builtin/64/243-collaboration-1.png"
+        },
+        {
+            "id": "58uaQtQh8DEu4aDat3U3Qi",
+            "title": "Personal Details",
+            "chartMap": {
+                "hjy6urbX6rxvDDiYsFWvnM": {
+                    "id": "hjy6urbX6rxvDDiYsFWvnM",
+                    "graphName": "Movies",
+                    "title": "Select Person",
+                    "type": "Inputs",
+                    "refreshRate": 0,
+                    "queryType": "pattern",
+                    "searchPattern": [],
+                    "query": "",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "inputStates": [
+                            {
+                                "id": "input_45vAv4WFePgPiaTNA2ft8d",
+                                "name": "personName",
+                                "dataType": "String",
+                                "widgetType": "Dropdown",
+                                "settings": {
+                                    "useQuery": true,
+                                    "open": false,
+                                    "searchPattern": [
+                                        {
+                                            "id": "47dc99fe-3828-45be-b912-d43e17d9e465",
+                                            "data": "Person",
+                                            "type": "vertex",
+                                            "alias": "Person",
+                                            "orderBy": [
+                                                {
+                                                    "asc": true,
+                                                    "expression": {
+                                                        "type": "AttrVariable",
+                                                        "value": "alias_schema_Person_0.name"
+                                                    },
+                                                    "label": "Person.name"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "query": "",
+                                    "graphName": "Movies",
+                                    "staticData": "{}",
+                                    "patternLimit": 300,
+                                    "options": [],
+                                    "tableHeaders": [
+                                        "Matched pattern",
+                                        "Person"
+                                    ],
+                                    "labelKey": "Person.name",
+                                    "valueKey": "Person.name"
+                                },
+                                "label": "Name"
+                            }
+                        ]
+                    }
+                },
+                "qisd6caUP5WhqQ6WCfeszb": {
+                    "id": "qisd6caUP5WhqQ6WCfeszb",
+                    "graphName": "Movies",
+                    "title": "Born",
+                    "type": "value",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [
+                        {
+                            "id": "fdf5b3fd-90b1-48cc-945d-4a786fcf6c28",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person",
+                            "orderBy": [
+                                {
+                                    "asc": true,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Person_0.name"
+                                    },
+                                    "label": "Person.name"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "79d6baa1-9201-474e-8ad1-e2c85373b568",
+                            "data": "personName",
+                            "type": "PARAM",
+                            "paramName": "name",
+                            "paramType": "STRING",
+                            "paramGlobalInput": "personName"
+                        }
+                    ],
+                    "query": "INTERPRET QUERY(string personName) FOR GRAPH Movies{\n  select p.born INTO T\n  FROM Person:p\n  where p.name == personName;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {}
+                },
+                "eBkfB1bSRNWBmPTcQqn9HR": {
+                    "id": "eBkfB1bSRNWBmPTcQqn9HR",
+                    "graphName": "Movies",
+                    "title": "# of Acted Movies",
+                    "type": "value",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [
+                        {
+                            "id": "fdf5b3fd-90b1-48cc-945d-4a786fcf6c28",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person",
+                            "orderBy": [
+                                {
+                                    "asc": true,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Person_0.name"
+                                    },
+                                    "label": "Person.name"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "79d6baa1-9201-474e-8ad1-e2c85373b568",
+                            "data": "personName",
+                            "type": "PARAM",
+                            "paramName": "name",
+                            "paramType": "STRING",
+                            "paramGlobalInput": "personName"
+                        }
+                    ],
+                    "query": "INTERPRET QUERY(string personName) FOR GRAPH Movies{\n  select count(m) INTO T\n  FROM Person:p -(ACTED_IN>:e)- Movie:m\n  where p.name == personName;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {}
+                },
+                "1ekcMpNhFhzBLtX6eKy1yK": {
+                    "id": "1ekcMpNhFhzBLtX6eKy1yK",
+                    "graphName": "Movies",
+                    "title": "# of Directed Movies",
+                    "type": "value",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [
+                        {
+                            "id": "fdf5b3fd-90b1-48cc-945d-4a786fcf6c28",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person",
+                            "orderBy": [
+                                {
+                                    "asc": true,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Person_0.name"
+                                    },
+                                    "label": "Person.name"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "79d6baa1-9201-474e-8ad1-e2c85373b568",
+                            "data": "personName",
+                            "type": "PARAM",
+                            "paramName": "name",
+                            "paramType": "STRING",
+                            "paramGlobalInput": "personName"
+                        }
+                    ],
+                    "query": "INTERPRET QUERY(string personName) FOR GRAPH Movies{\n  select count(m) INTO T\n  FROM Person:p -(DIRECTED>:e)- Movie:m\n  where p.name == personName;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {}
+                },
+                "biXViXQJDzUZJLHs1Vcke2": {
+                    "id": "biXViXQJDzUZJLHs1Vcke2",
+                    "graphName": "Movies",
+                    "title": "# of Followers",
+                    "type": "value",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [
+                        {
+                            "id": "fdf5b3fd-90b1-48cc-945d-4a786fcf6c28",
+                            "data": "Person",
+                            "type": "vertex",
+                            "alias": "Person",
+                            "orderBy": [
+                                {
+                                    "asc": true,
+                                    "expression": {
+                                        "type": "AttrVariable",
+                                        "value": "alias_schema_Person_0.name"
+                                    },
+                                    "label": "Person.name"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "79d6baa1-9201-474e-8ad1-e2c85373b568",
+                            "data": "personName",
+                            "type": "PARAM",
+                            "paramName": "name",
+                            "paramType": "STRING",
+                            "paramGlobalInput": "personName"
+                        }
+                    ],
+                    "query": "INTERPRET QUERY(string personName) FOR GRAPH Movies{\n  select count(p) INTO T\n  FROM Person:p -(FOLLOWS>:e)- Person:p2\n  where p2.name == personName;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {}
+                },
+                "3VYnodvYD1zRsfjY5NcpE2": {
+                    "id": "3VYnodvYD1zRsfjY5NcpE2",
+                    "graphName": "Movies",
+                    "title": "Profile Graph",
+                    "type": "internal-graph",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [],
+                    "query": "INTERPRET QUERY(string personName) FOR GRAPH Movies{\n  person = select p from Person:p \n  WHERE p.name == personName;\n  PRINT person;\n  \n  movies = select m\n  FROM person -(_>:e)- Movie:m;\n  PRINT movies;\n  \n  select e INTO T\n  FROM person -(_>:e)- Movie:m;\n  PRINT T;\n  \n  followers = select p2\n  FROM person -(<FOLLOWS:e)- Person:p2;\n  PRINT followers;\n  \n  select e INTO T2\n  FROM person -(<FOLLOWS:e)- Person:p2;\n  PRINT T2;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {}
+                },
+                "gAfM7pZuPey7QL2FpZvDWD": {
+                    "id": "gAfM7pZuPey7QL2FpZvDWD",
+                    "graphName": "Movies",
+                    "title": "Related Movies",
+                    "type": "table",
+                    "refreshRate": 0,
+                    "queryType": "interactive",
+                    "searchPattern": [],
+                    "query": "INTERPRET QUERY(string personName) FOR GRAPH Movies{\n  select m.title as Title,e.type as Type, m.released as Released, m.tagline as Tagline INTO T\n  FROM Person: p -(_>:e)- Movie:m\n  where p.name == personName\n  order by Released desc;\n  PRINT T;\n}",
+                    "staticData": "{}",
+                    "patternLimit": 300,
+                    "chartSettings": {
+                        "tableColumns": [
+                            {
+                                "id": "Matched pattern",
+                                "isChecked": "true",
+                                "label": ""
+                            },
+                            {
+                                "id": "Vertices",
+                                "isChecked": "true",
+                                "isExpanded": true,
+                                "children": [],
+                                "label": "Vertices"
+                            },
+                            {
+                                "id": "Edges",
+                                "isChecked": "true",
+                                "isExpanded": false,
+                                "children": [],
+                                "label": "Edges"
+                            }
+                        ],
+                        "showColumns": [
+                            {
+                                "name": "Released",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Tagline",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Title",
+                                "isChecked": true
+                            },
+                            {
+                                "name": "Type",
+                                "isChecked": true
+                            }
+                        ],
+                        "tableHeaders": [
+                            "Released",
+                            "Tagline",
+                            "Title",
+                            "Type"
+                        ]
+                    }
+                }
+            },
+            "layouts": {
+                "md": [
+                    {
+                        "w": 3,
+                        "h": 7,
+                        "x": 0,
+                        "y": 0,
+                        "i": "hjy6urbX6rxvDDiYsFWvnM",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 3,
+                        "h": 7,
+                        "x": 3,
+                        "y": 0,
+                        "i": "qisd6caUP5WhqQ6WCfeszb",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 2,
+                        "h": 7,
+                        "x": 6,
+                        "y": 0,
+                        "i": "eBkfB1bSRNWBmPTcQqn9HR",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 2,
+                        "h": 7,
+                        "x": 8,
+                        "y": 0,
+                        "i": "1ekcMpNhFhzBLtX6eKy1yK",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 2,
+                        "h": 7,
+                        "x": 10,
+                        "y": 0,
+                        "i": "biXViXQJDzUZJLHs1Vcke2",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 6,
+                        "h": 42,
+                        "x": 0,
+                        "y": 7,
+                        "i": "3VYnodvYD1zRsfjY5NcpE2",
+                        "moved": false,
+                        "static": false
+                    },
+                    {
+                        "w": 6,
+                        "h": 42,
+                        "x": 6,
+                        "y": 7,
+                        "i": "gAfM7pZuPey7QL2FpZvDWD",
+                        "moved": false,
+                        "static": false
+                    }
+                ]
+            },
+            "globalParameters": {
+                "personName": {
+                    "value": "Tom Hanks",
+                    "type": "STRING",
+                    "name": "personName",
+                    "id": "input_45vAv4WFePgPiaTNA2ft8d"
+                }
+            },
+            "isNew": false,
+            "iconURL": "/studio/assets/gvis/icons/builtin/64/063-books.png"
+        }
+    ],
+    "version": "1668416214353590498",
+    "iconURL": "/studio/assets/gvis/icons/builtin/64/063-books.png",
+    "defaultGraph": "Movies",
+    "owner": "sam.zhou@tigergraph.com",
+    "screenshot": "data:image/jpeg;base64,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"
+}
