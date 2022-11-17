@@ -1,5 +1,5 @@
 {
-    "id": "xesfUUjLw783r6GS68JgYp",
+    "id": "72CyWCs7CzM4H4oHnJsjau",
     "title": "Movie App",
     "pages": [
         {
@@ -379,6 +379,22 @@
                                 "id": "MovieCount",
                                 "type": "number"
                             }
+                        ],
+                        "chartActions": [
+                            {
+                                "text": "Details",
+                                "url": "",
+                                "params": [
+                                    {
+                                        "name": "personName",
+                                        "value": "Director",
+                                        "paramGlobalInput": "",
+                                        "isCreatable": false
+                                    }
+                                ],
+                                "urlName": "Personal Details",
+                                "pageID": "58uaQtQh8DEu4aDat3U3Qi"
+                            }
                         ]
                     }
                 },
@@ -390,18 +406,18 @@
                     "refreshRate": 0,
                     "queryType": "interactive",
                     "searchPattern": [],
-                    "query": "INTERPRET QUERY(INT fromYear, INT toYear) FOR GRAPH Movies{\n  SELECT    p.name AS Director, count(m) AS MovieCount INTO T\n  FROM      Person:p -(ACTED_IN>:e)- Movie:m\n  WHERE m.released >= fromYear AND m.released <= toYear\n  GROUP BY p\n  ORDER BY count(m) desc\n  LIMIT 10;\n  PRINT T;\n}",
+                    "query": "INTERPRET QUERY(INT fromYear, INT toYear) FOR GRAPH Movies{\n  SELECT    p.name AS PersonName, count(m) AS MovieCount INTO T\n  FROM      Person:p -(ACTED_IN>:e)- Movie:m\n  WHERE m.released >= fromYear AND m.released <= toYear\n  GROUP BY p\n  ORDER BY count(m) desc\n  LIMIT 10;\n  PRINT T;\n}",
                     "staticData": "{}",
                     "patternLimit": 300,
                     "chartSettings": {
                         "tableIndex": 0,
                         "tableHeaders": [
-                            "Director",
-                            "MovieCount"
+                            "MovieCount",
+                            "PersonName"
                         ],
                         "category": [
                             {
-                                "id": "Director",
+                                "id": "PersonName",
                                 "type": "string"
                             }
                         ],
@@ -409,6 +425,22 @@
                             {
                                 "id": "MovieCount",
                                 "type": "number"
+                            }
+                        ],
+                        "chartActions": [
+                            {
+                                "text": "",
+                                "url": "",
+                                "params": [
+                                    {
+                                        "name": "personName",
+                                        "value": "PersonName",
+                                        "paramGlobalInput": "",
+                                        "isCreatable": false
+                                    }
+                                ],
+                                "urlName": "Personal Details",
+                                "pageID": "58uaQtQh8DEu4aDat3U3Qi"
                             }
                         ]
                     }
@@ -786,6 +818,22 @@
                         "sortedColumns": [
                             "Person.name",
                             "Person.born"
+                        ],
+                        "tableActions": [
+                            {
+                                "text": "Details",
+                                "url": "",
+                                "params": [
+                                    {
+                                        "name": "personName",
+                                        "value": "Person.name",
+                                        "paramGlobalInput": "",
+                                        "isCreatable": false
+                                    }
+                                ],
+                                "urlName": "Personal Details",
+                                "pageID": "58uaQtQh8DEu4aDat3U3Qi"
+                            }
                         ]
                     }
                 },
@@ -990,6 +1038,22 @@
                         "sortedColumns": [
                             "Person.name",
                             "Person.born"
+                        ],
+                        "tableActions": [
+                            {
+                                "text": "Details",
+                                "url": "",
+                                "params": [
+                                    {
+                                        "name": "personName",
+                                        "value": "Person.name",
+                                        "paramGlobalInput": "",
+                                        "isCreatable": false
+                                    }
+                                ],
+                                "urlName": "Personal Details",
+                                "pageID": "58uaQtQh8DEu4aDat3U3Qi"
+                            }
                         ]
                     }
                 },
@@ -1177,6 +1241,22 @@
                         "sortedColumns": [
                             "Person.name",
                             "Person.born"
+                        ],
+                        "tableActions": [
+                            {
+                                "text": "Details",
+                                "url": "",
+                                "params": [
+                                    {
+                                        "name": "personName",
+                                        "value": "Person.name",
+                                        "paramGlobalInput": "",
+                                        "isCreatable": false
+                                    }
+                                ],
+                                "urlName": "Personal Details",
+                                "pageID": "58uaQtQh8DEu4aDat3U3Qi"
+                            }
                         ]
                     }
                 },
@@ -1340,19 +1420,19 @@
                                 "isChecked": true
                             },
                             {
-                                "name": "PRODUCED.from_type",
+                                "name": "WROTE.from_type",
                                 "isChecked": true
                             },
                             {
-                                "name": "PRODUCED.from_id",
+                                "name": "WROTE.from_id",
                                 "isChecked": true
                             },
                             {
-                                "name": "PRODUCED.to_type",
+                                "name": "WROTE.to_type",
                                 "isChecked": true
                             },
                             {
-                                "name": "PRODUCED.to_id",
+                                "name": "WROTE.to_id",
                                 "isChecked": true
                             }
                         ],
@@ -1360,11 +1440,28 @@
                             "Matched pattern",
                             "Movie",
                             "Person",
-                            "PRODUCED"
+                            "WROTE"
                         ],
                         "sortedColumns": [
                             "Person.name",
-                            "Person.born"
+                            "Person.born",
+                            "Action"
+                        ],
+                        "tableActions": [
+                            {
+                                "text": "Details",
+                                "url": "",
+                                "params": [
+                                    {
+                                        "name": "personName",
+                                        "value": "Person.name",
+                                        "paramGlobalInput": "",
+                                        "isCreatable": false
+                                    }
+                                ],
+                                "urlName": "Personal Details",
+                                "pageID": "58uaQtQh8DEu4aDat3U3Qi"
+                            }
                         ]
                     }
                 }
@@ -1805,6 +1902,29 @@
                             "Tagline",
                             "Title",
                             "Type"
+                        ],
+                        "tableActions": [
+                            {
+                                "text": "Details",
+                                "url": "",
+                                "params": [
+                                    {
+                                        "name": "movieName",
+                                        "value": "Title",
+                                        "paramGlobalInput": "",
+                                        "isCreatable": false
+                                    }
+                                ],
+                                "urlName": "Movie Details",
+                                "pageID": "3EjCGCrw1SvzTkHsBN7Zm3"
+                            }
+                        ],
+                        "sortedColumns": [
+                            "Title",
+                            "Released",
+                            "Tagline",
+                            "Type",
+                            "Action"
                         ]
                     }
                 }
@@ -1888,7 +2008,7 @@
             "iconURL": "/studio/assets/gvis/icons/builtin/64/063-books.png"
         }
     ],
-    "version": "1668416214353590498",
+    "version": "1668677287510635822",
     "iconURL": "/studio/assets/gvis/icons/builtin/64/063-books.png",
     "defaultGraph": "Movies",
     "owner": "sam.zhou@tigergraph.com",
