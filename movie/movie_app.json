@@ -1,14 +1,104 @@
 {
     "defaultGraph": "Movies",
     "iconURL": "/studio/assets/gvis/icons/builtin/64/063-books.png",
-    "id": "dCm9BHCpQWYcQoybNN4VG6",
+    "id": "86d4irfsXqqJkNfrVLj2VT",
     "owner": "sam.zhou@tigergraph.com",
     "pageConfigSeparated": true,
     "screenshot": "data:image/jpeg;base64,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",
     "title": "Movie App",
-    "version": "1678803335460399229",
+    "version": "1678845765857508851",
     "pages": [
         {
+            "globalParameters": {
+                "movieName": {
+                    "id": "input_wHGoanvEsmvDdoMLkvP7a4",
+                    "name": "movieName",
+                    "type": "STRING",
+                    "value": "Speed Racer"
+                }
+            },
+            "iconURL": "/studio/assets/gvis/icons/builtin/64/121-battery.png",
+            "id": "3EjCGCrw1SvzTkHsBN7Zm3",
+            "isDetail": true,
+            "isNew": false,
+            "layouts": {
+                "md": [
+                    {
+                        "h": 7,
+                        "i": "75Am8rnGucFwKvAPsvxxiz",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 3,
+                        "y": 0
+                    },
+                    {
+                        "h": 21,
+                        "i": "dZZ6VRtt54eDfT9ASunpso",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 9,
+                        "y": 27
+                    },
+                    {
+                        "h": 7,
+                        "i": "hPybcPVKmddoKQv3czYs6G",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 20,
+                        "i": "icBGbpMTBerowJmsZ3fiVT",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 6,
+                        "y": 7
+                    },
+                    {
+                        "h": 21,
+                        "i": "kooJ9TFVxgMowiF9n3MGhc",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 6,
+                        "y": 27
+                    },
+                    {
+                        "h": 20,
+                        "i": "rCpHe2r7edphpiCPgigLSE",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 9,
+                        "y": 7
+                    },
+                    {
+                        "h": 7,
+                        "i": "sGgnPfm8oz1MERHT69H831",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 6,
+                        "y": 0
+                    },
+                    {
+                        "h": 41,
+                        "i": "uJzcWyqyPSA2gzeaFFwBCL",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 0,
+                        "y": 7
+                    }
+                ]
+            },
+            "title": "Movie Details",
+            "version": "1678845765865788116",
             "chartMap": {
                 "75Am8rnGucFwKvAPsvxxiz": {
                     "chartSettings": {},
@@ -22,7 +112,7 @@
                     "staticData": "{}",
                     "title": "Release Year",
                     "type": "value",
-                    "version": "1678803335514949291"
+                    "version": "1678845765882542780"
                 },
                 "dZZ6VRtt54eDfT9ASunpso": {
                     "chartSettings": {
@@ -228,7 +318,7 @@
                     "staticData": "{}",
                     "title": "Writers",
                     "type": "table",
-                    "version": "1678803335553062385"
+                    "version": "1678845765890108057"
                 },
                 "hPybcPVKmddoKQv3czYs6G": {
                     "chartSettings": {
@@ -285,7 +375,7 @@
                     "staticData": "{}",
                     "title": "Select a Movie",
                     "type": "Inputs",
-                    "version": "1678803335511234646"
+                    "version": "1678845765893719936"
                 },
                 "icBGbpMTBerowJmsZ3fiVT": {
                     "chartSettings": {
@@ -489,7 +579,7 @@
                     "staticData": "{}",
                     "title": "Directors",
                     "type": "table",
-                    "version": "1678803335538393203"
+                    "version": "1678845765898986746"
                 },
                 "kooJ9TFVxgMowiF9n3MGhc": {
                     "chartSettings": {
@@ -710,7 +800,7 @@
                     "staticData": "{}",
                     "title": "Actors/Actresses",
                     "type": "table",
-                    "version": "1678803335543227694"
+                    "version": "1678845765903274982"
                 },
                 "rCpHe2r7edphpiCPgigLSE": {
                     "chartSettings": {
@@ -914,7 +1004,7 @@
                     "staticData": "{}",
                     "title": "Producers",
                     "type": "table",
-                    "version": "1678803335548682794"
+                    "version": "1678845765907885656"
                 },
                 "sGgnPfm8oz1MERHT69H831": {
                     "chartSettings": {
@@ -933,7 +1023,7 @@
                     "staticData": "{}",
                     "title": "Tagline",
                     "type": "value",
-                    "version": "1678803335519202670"
+                    "version": "1678845765912610153"
                 },
                 "uJzcWyqyPSA2gzeaFFwBCL": {
                     "chartSettings": {},
@@ -947,101 +1037,92 @@
                     "staticData": "{}",
                     "title": "Movie Graph",
                     "type": "internal-graph",
-                    "version": "1678803335532399427"
+                    "version": "1678845765915888554"
                 }
-            },
+            }
+        },
+        {
             "globalParameters": {
-                "movieName": {
-                    "id": "input_wHGoanvEsmvDdoMLkvP7a4",
-                    "name": "movieName",
+                "personName": {
+                    "id": "input_45vAv4WFePgPiaTNA2ft8d",
+                    "name": "personName",
                     "type": "STRING",
-                    "value": "Speed Racer"
+                    "value": "Tom Hanks"
                 }
             },
-            "iconURL": "/studio/assets/gvis/icons/builtin/64/121-battery.png",
-            "id": "3EjCGCrw1SvzTkHsBN7Zm3",
+            "iconURL": "/studio/assets/gvis/icons/builtin/64/063-books.png",
+            "id": "58uaQtQh8DEu4aDat3U3Qi",
             "isDetail": true,
             "isNew": false,
             "layouts": {
                 "md": [
                     {
                         "h": 7,
-                        "i": "75Am8rnGucFwKvAPsvxxiz",
+                        "i": "1ekcMpNhFhzBLtX6eKy1yK",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 8,
+                        "y": 0
+                    },
+                    {
+                        "h": 42,
+                        "i": "3VYnodvYD1zRsfjY5NcpE2",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 0,
+                        "y": 7
+                    },
+                    {
+                        "h": 7,
+                        "i": "biXViXQJDzUZJLHs1Vcke2",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 10,
+                        "y": 0
+                    },
+                    {
+                        "h": 7,
+                        "i": "eBkfB1bSRNWBmPTcQqn9HR",
+                        "moved": false,
+                        "static": false,
+                        "w": 2,
+                        "x": 6,
+                        "y": 0
+                    },
+                    {
+                        "h": 42,
+                        "i": "gAfM7pZuPey7QL2FpZvDWD",
+                        "moved": false,
+                        "static": false,
+                        "w": 6,
+                        "x": 6,
+                        "y": 7
+                    },
+                    {
+                        "h": 7,
+                        "i": "hjy6urbX6rxvDDiYsFWvnM",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 7,
+                        "i": "qisd6caUP5WhqQ6WCfeszb",
                         "moved": false,
                         "static": false,
                         "w": 3,
                         "x": 3,
                         "y": 0
-                    },
-                    {
-                        "h": 21,
-                        "i": "dZZ6VRtt54eDfT9ASunpso",
-                        "moved": false,
-                        "static": false,
-                        "w": 3,
-                        "x": 9,
-                        "y": 27
-                    },
-                    {
-                        "h": 7,
-                        "i": "hPybcPVKmddoKQv3czYs6G",
-                        "moved": false,
-                        "static": false,
-                        "w": 3,
-                        "x": 0,
-                        "y": 0
-                    },
-                    {
-                        "h": 20,
-                        "i": "icBGbpMTBerowJmsZ3fiVT",
-                        "moved": false,
-                        "static": false,
-                        "w": 3,
-                        "x": 6,
-                        "y": 7
-                    },
-                    {
-                        "h": 21,
-                        "i": "kooJ9TFVxgMowiF9n3MGhc",
-                        "moved": false,
-                        "static": false,
-                        "w": 3,
-                        "x": 6,
-                        "y": 27
-                    },
-                    {
-                        "h": 20,
-                        "i": "rCpHe2r7edphpiCPgigLSE",
-                        "moved": false,
-                        "static": false,
-                        "w": 3,
-                        "x": 9,
-                        "y": 7
-                    },
-                    {
-                        "h": 7,
-                        "i": "sGgnPfm8oz1MERHT69H831",
-                        "moved": false,
-                        "static": false,
-                        "w": 6,
-                        "x": 6,
-                        "y": 0
-                    },
-                    {
-                        "h": 41,
-                        "i": "uJzcWyqyPSA2gzeaFFwBCL",
-                        "moved": false,
-                        "static": false,
-                        "w": 6,
-                        "x": 0,
-                        "y": 7
                     }
                 ]
             },
-            "title": "Movie Details",
-            "version": "1678803337343926458"
-        },
-        {
+            "title": "Personal Details",
+            "version": "1678845765869274832",
             "chartMap": {
                 "1ekcMpNhFhzBLtX6eKy1yK": {
                     "chartSettings": {},
@@ -1080,7 +1161,7 @@
                     "staticData": "{}",
                     "title": "# of Directed Movies",
                     "type": "value",
-                    "version": "1678803335572011075"
+                    "version": "1678845765919735999"
                 },
                 "3VYnodvYD1zRsfjY5NcpE2": {
                     "chartSettings": {
@@ -1096,7 +1177,7 @@
                     "staticData": "{}",
                     "title": "Profile Graph",
                     "type": "internal-graph",
-                    "version": "1678804196483190731"
+                    "version": "1678845765923410240"
                 },
                 "biXViXQJDzUZJLHs1Vcke2": {
                     "chartSettings": {},
@@ -1135,7 +1216,7 @@
                     "staticData": "{}",
                     "title": "# of Followers",
                     "type": "value",
-                    "version": "1678803335575425893"
+                    "version": "1678845765926516626"
                 },
                 "eBkfB1bSRNWBmPTcQqn9HR": {
                     "chartSettings": {},
@@ -1174,7 +1255,7 @@
                     "staticData": "{}",
                     "title": "# of Acted Movies",
                     "type": "value",
-                    "version": "1678803335568173073"
+                    "version": "1678845765932278449"
                 },
                 "gAfM7pZuPey7QL2FpZvDWD": {
                     "chartSettings": {
@@ -1257,7 +1338,7 @@
                     "staticData": "{}",
                     "title": "Related Movies",
                     "type": "table",
-                    "version": "1678803335582704227"
+                    "version": "1678845765935669403"
                 },
                 "hjy6urbX6rxvDDiYsFWvnM": {
                     "chartSettings": {
@@ -1314,7 +1395,7 @@
                     "staticData": "{}",
                     "title": "Select Person",
                     "type": "Inputs",
-                    "version": "1678803335561669854"
+                    "version": "1678845765939382044"
                 },
                 "qisd6caUP5WhqQ6WCfeszb": {
                     "chartSettings": {},
@@ -1353,90 +1434,9 @@
                     "staticData": "{}",
                     "title": "Born",
                     "type": "value",
-                    "version": "1678803335564450651"
+                    "version": "1678845765943592798"
                 }
-            },
-            "globalParameters": {
-                "personName": {
-                    "id": "input_45vAv4WFePgPiaTNA2ft8d",
-                    "name": "personName",
-                    "type": "STRING",
-                    "value": "Tom Hanks"
-                }
-            },
-            "iconURL": "/studio/assets/gvis/icons/builtin/64/063-books.png",
-            "id": "58uaQtQh8DEu4aDat3U3Qi",
-            "isDetail": true,
-            "isNew": false,
-            "layouts": {
-                "md": [
-                    {
-                        "h": 7,
-                        "i": "1ekcMpNhFhzBLtX6eKy1yK",
-                        "moved": false,
-                        "static": false,
-                        "w": 2,
-                        "x": 8,
-                        "y": 0
-                    },
-                    {
-                        "h": 42,
-                        "i": "3VYnodvYD1zRsfjY5NcpE2",
-                        "moved": false,
-                        "static": false,
-                        "w": 6,
-                        "x": 0,
-                        "y": 7
-                    },
-                    {
-                        "h": 7,
-                        "i": "biXViXQJDzUZJLHs1Vcke2",
-                        "moved": false,
-                        "static": false,
-                        "w": 2,
-                        "x": 10,
-                        "y": 0
-                    },
-                    {
-                        "h": 7,
-                        "i": "eBkfB1bSRNWBmPTcQqn9HR",
-                        "moved": false,
-                        "static": false,
-                        "w": 2,
-                        "x": 6,
-                        "y": 0
-                    },
-                    {
-                        "h": 42,
-                        "i": "gAfM7pZuPey7QL2FpZvDWD",
-                        "moved": false,
-                        "static": false,
-                        "w": 6,
-                        "x": 6,
-                        "y": 7
-                    },
-                    {
-                        "h": 7,
-                        "i": "hjy6urbX6rxvDDiYsFWvnM",
-                        "moved": false,
-                        "static": false,
-                        "w": 3,
-                        "x": 0,
-                        "y": 0
-                    },
-                    {
-                        "h": 7,
-                        "i": "qisd6caUP5WhqQ6WCfeszb",
-                        "moved": false,
-                        "static": false,
-                        "w": 3,
-                        "x": 3,
-                        "y": 0
-                    }
-                ]
-            },
-            "title": "Personal Details",
-            "version": "1678803869867460239"
+            }
         },
         {
             "globalParameters": {},
@@ -1457,7 +1457,7 @@
                 ]
             },
             "title": "Person Graph",
-            "version": "1678803335474969011",
+            "version": "1678845765872941043",
             "chartMap": {
                 "fnmAtPKDQ89q8Qjk56TtFZ": {
                     "chartSettings": {},
@@ -1504,97 +1504,11 @@
                     "staticData": "{}",
                     "title": "Person Graph",
                     "type": "internal-graph",
-                    "version": "1678803335558278843"
+                    "version": "1678845765948934910"
                 }
             }
         },
         {
-            "globalParameters": {
-                "fromYear": {
-                    "id": "input_iNNnYYkD8qXvRJkZMbWWYS",
-                    "name": "fromYear",
-                    "type": "NUMBER",
-                    "value": 1960
-                },
-                "toYear": {
-                    "id": "input_rgPeq3iEdEhNjMwzU1vtJr",
-                    "name": "toYear",
-                    "type": "NUMBER",
-                    "value": 2022
-                }
-            },
-            "iconURL": "/studio/assets/gvis/icons/builtin/64/116-statistics.png",
-            "id": "bokMKUfH5o2t2FF85cYcNR",
-            "isNew": false,
-            "layouts": {
-                "md": [
-                    {
-                        "h": 48,
-                        "i": "kBp6w7jq32Dbajyz6f4SGv",
-                        "moved": false,
-                        "static": false,
-                        "w": 5,
-                        "x": 0,
-                        "y": 0
-                    },
-                    {
-                        "h": 8,
-                        "i": "6VWz9pL8vZ9Xg4TdEQRfmZ",
-                        "moved": false,
-                        "static": false,
-                        "w": 4,
-                        "x": 5,
-                        "y": 0
-                    },
-                    {
-                        "h": 8,
-                        "i": "wLGqFuMEnKhqcwjaLGkskG",
-                        "moved": false,
-                        "static": false,
-                        "w": 3,
-                        "x": 9,
-                        "y": 0
-                    },
-                    {
-                        "h": 14,
-                        "i": "dxSEi5ZUWQJjDeK7PShPsF",
-                        "moved": false,
-                        "static": false,
-                        "w": 7,
-                        "x": 5,
-                        "y": 34
-                    },
-                    {
-                        "h": 26,
-                        "i": "tyNF3fJu6Zj7g8yFpmtJfV",
-                        "moved": false,
-                        "static": false,
-                        "w": 4,
-                        "x": 5,
-                        "y": 8
-                    },
-                    {
-                        "h": 13,
-                        "i": "qtZbkYip6SF9QdZmvQSgZF",
-                        "moved": false,
-                        "static": false,
-                        "w": 3,
-                        "x": 9,
-                        "y": 8
-                    },
-                    {
-                        "h": 13,
-                        "i": "4w7sHiDDQQ6ZUPdESG6TA7",
-                        "moved": false,
-                        "static": false,
-                        "w": 3,
-                        "x": 9,
-                        "y": 21
-                    }
-                ]
-            },
-            "title": "Overview",
-            "version": "1678803335468052978",
             "chartMap": {
                 "4w7sHiDDQQ6ZUPdESG6TA7": {
                     "chartSettings": {
@@ -1642,7 +1556,7 @@
                     "staticData": "{}",
                     "title": "Top 10 Actors / Actresses",
                     "type": "pie",
-                    "version": "1678803335507242529"
+                    "version": "1678845765952837786"
                 },
                 "6VWz9pL8vZ9Xg4TdEQRfmZ": {
                     "chartSettings": {
@@ -1685,7 +1599,7 @@
                     "staticData": "{}",
                     "title": "Release Year",
                     "type": "Inputs",
-                    "version": "1678803335489377355"
+                    "version": "1678845765956275741"
                 },
                 "dxSEi5ZUWQJjDeK7PShPsF": {
                     "chartSettings": {
@@ -1741,7 +1655,7 @@
                     "staticData": "{}",
                     "title": "Release Trend",
                     "type": "line",
-                    "version": "1678803335495307494"
+                    "version": "1678845765960319192"
                 },
                 "kBp6w7jq32Dbajyz6f4SGv": {
                     "chartSettings": {},
@@ -1828,7 +1742,7 @@
                     "staticData": "{}",
                     "title": "Movie Graph",
                     "type": "internal-graph",
-                    "version": "1678803335483778249"
+                    "version": "1678845765965137281"
                 },
                 "qtZbkYip6SF9QdZmvQSgZF": {
                     "chartSettings": {
@@ -1876,7 +1790,7 @@
                     "staticData": "{}",
                     "title": "Top 10 Directors",
                     "type": "pie",
-                    "version": "1678803335502791866"
+                    "version": "1678845765968550775"
                 },
                 "tyNF3fJu6Zj7g8yFpmtJfV": {
                     "chartSettings": {
@@ -2023,7 +1937,7 @@
                     "staticData": "{}",
                     "title": "Movies",
                     "type": "table",
-                    "version": "1678803335498467625"
+                    "version": "1678845765972704868"
                 },
                 "wLGqFuMEnKhqcwjaLGkskG": {
                     "chartSettings": {
@@ -2040,9 +1954,97 @@
                     "staticData": "{}",
                     "title": "# of Movies",
                     "type": "value",
-                    "version": "1678803335492769548"
+                    "version": "1678845765977538207"
                 }
-            }
+            },
+            "globalParameters": {
+                "fromYear": {
+                    "id": "input_iNNnYYkD8qXvRJkZMbWWYS",
+                    "name": "fromYear",
+                    "type": "NUMBER",
+                    "value": 1960
+                },
+                "toYear": {
+                    "id": "input_rgPeq3iEdEhNjMwzU1vtJr",
+                    "name": "toYear",
+                    "type": "NUMBER",
+                    "value": 2022
+                }
+            },
+            "iconURL": "/studio/assets/gvis/icons/builtin/64/116-statistics.png",
+            "id": "bokMKUfH5o2t2FF85cYcNR",
+            "isDetail": false,
+            "isNew": false,
+            "layouts": {
+                "md": [
+                    {
+                        "h": 13,
+                        "i": "4w7sHiDDQQ6ZUPdESG6TA7",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 9,
+                        "y": 21
+                    },
+                    {
+                        "h": 8,
+                        "i": "6VWz9pL8vZ9Xg4TdEQRfmZ",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 5,
+                        "y": 0
+                    },
+                    {
+                        "h": 14,
+                        "i": "dxSEi5ZUWQJjDeK7PShPsF",
+                        "moved": false,
+                        "static": false,
+                        "w": 7,
+                        "x": 5,
+                        "y": 34
+                    },
+                    {
+                        "h": 48,
+                        "i": "kBp6w7jq32Dbajyz6f4SGv",
+                        "moved": false,
+                        "static": false,
+                        "w": 5,
+                        "x": 0,
+                        "y": 0
+                    },
+                    {
+                        "h": 13,
+                        "i": "qtZbkYip6SF9QdZmvQSgZF",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 9,
+                        "y": 8
+                    },
+                    {
+                        "h": 26,
+                        "i": "tyNF3fJu6Zj7g8yFpmtJfV",
+                        "moved": false,
+                        "static": false,
+                        "w": 4,
+                        "x": 5,
+                        "y": 8
+                    },
+                    {
+                        "h": 8,
+                        "i": "wLGqFuMEnKhqcwjaLGkskG",
+                        "moved": false,
+                        "static": false,
+                        "w": 3,
+                        "x": 9,
+                        "y": 0
+                    }
+                ]
+            },
+            "title": "Overview",
+            "version": "1678847990655560807",
+            "weight": null
         }
     ]
 }
